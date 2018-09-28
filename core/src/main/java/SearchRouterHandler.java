@@ -9,7 +9,6 @@ public class SearchRouterHandler {
 
     private EventBus eventBus;
 
-
     public void handleSearchRequest(SearchQuery searchQuery) {
         List<SearchEvent> searchEventList = getSearchProviderEvents();
         searchEventList.forEach(e -> eventBus.sendEvent(e));
